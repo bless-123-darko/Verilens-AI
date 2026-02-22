@@ -1,0 +1,22 @@
+# API keys — NEVER commit this
+.env
+
+# Uploaded files (temp storage)
+uploads/*
+!uploads/.gitkeep
+
+# SQLite database (auto-created at runtime)
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

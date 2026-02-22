@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = [
+  "php83",
+  "php83Extensions.curl",
+  "php83Extensions.pdo",
+  "php83Extensions.pdo_sqlite",
+  "php83Extensions.sqlite3",
+  "php83Extensions.fileinfo",
+  "php83Extensions.mbstring",
+  "php83Extensions.openssl",
+]
+
+[start]
+cmd = "php -S 0.0.0.0:$PORT"

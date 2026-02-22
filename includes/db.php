@@ -6,7 +6,9 @@ function getDB(): PDO {
         return $pdo;
     }
 
-    $dbPath = __DIR__ . '/../verilens.sqlite';
+    // DB_PATH env var lets Railway (or any host) point to a persistent volume.
+    // Falls back to the project root for local XAMPP development.
+    $dbPath = getenv('DB_PATH') ?: __DIR__ . '/../verilens.sqlite';
 
     try {
         $pdo = new PDO('sqlite:' . $dbPath);
